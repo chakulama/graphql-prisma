@@ -1,0 +1,18 @@
+type PersonaGQL {
+	id: ID! @unique
+	username: String! @unique
+	password: String!
+	rol: String!
+	puntos: Int
+  events:[Event!]!
+}
+
+type Event {
+	Id: ID!
+	title: String!
+	description: String!
+	status: Boolean!
+	startdate: String!
+	enddate: String!
+  persona:PersonaGQL!
+}
